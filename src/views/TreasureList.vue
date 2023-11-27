@@ -1,15 +1,16 @@
 <template>
   <main>
-    <div class="w-full h-5 bg-red-100 ">HELLOW?</div>
-
-    <div v-for="treasure in treasureList" class="w-full h-5 bg-red-100 ">{{treasure.name}}</div>
+  <div name="listContainer" class="w-full h-full space-y-2">
+    <TreasureItem v-for="treasure in treasureList" 
+        :treasure="treasure"/>
+  </div>
   </main>
 </template>
 
 <script setup>
 import { storeToRefs } from 'pinia';
-import TheWelcome from '../components/TheWelcome.vue'
 import {useTreasureStore} from '../stores/treasureStore'
+import TreasureItem from '../components/TreasureItem.vue';
 
 const treasureStore = useTreasureStore();
 
