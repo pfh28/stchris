@@ -2,10 +2,10 @@
     <div class="w-full bg-gray-200 px-3 py-1 rounded-sm flex flex-col">
         <div class="flex justify-between">
             {{treasure.name}}
-            <div class="flex flex-row space-x-1">
-                <img class="w-8 h-8 rounded-lg" :src="answerImage"/>
+            <div class="flex flex-row flex-none space-x-1">
+                <img class="w-8 h-8 flex-none rounded-lg" :src="answerImage"/>
                 <cameraButton @fileAdded="processFile"/>
-                <button class="w-8 h-8 bg-gray-400 rounded-lg grid place-content-center"
+                <button class="w-8 h-8 flex-none bg-gray-400 rounded-lg grid place-content-center"
                  @click="expanded = !expanded">
                     <ChevronUpIcon class="w-5" v-if="expanded"/>
                     <ChevronDownIcon class="w-5" v-else=""/>

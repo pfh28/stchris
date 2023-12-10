@@ -1,7 +1,7 @@
 <template>
   <main>
   <div name="listContainer" class="w-full h-full space-y-2">
-    <TreasureItem v-for="treasure in treasureList" 
+    <TreasureItem v-for="treasure in treasureList" :key="treasure.id" 
         :treasure="treasure"/>
   </div>
   </main>
